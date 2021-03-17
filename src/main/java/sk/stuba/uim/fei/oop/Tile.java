@@ -2,6 +2,10 @@ package sk.stuba.uim.fei.oop;
 
 public abstract class Tile {
 
+    protected boolean isRevealed() {
+        return revealed;
+    }
+
     private boolean revealed;
 
     public Tile(){
