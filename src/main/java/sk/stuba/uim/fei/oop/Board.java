@@ -12,7 +12,7 @@ public class Board {
 
 
 
-    private void fillBoard(){
+    private void fillBoard() {
         for(int i=0;i<BOARD_SIZE;i++){
             for(int j=0;j<BOARD_SIZE;j++){
                 this.board[i][j] = new Empty();
@@ -23,7 +23,10 @@ public class Board {
 
     public String draw(){
         StringBuilder builder = new StringBuilder();
+        builder.append("  0123456789\n");
         for(int i=0;i<BOARD_SIZE;i++){
+            builder.append((char)('a'+ i));
+            builder.append(" ");
             for(int j=0;j<BOARD_SIZE;j++){
                 builder.append(this.board[i][j].draw());
             }
