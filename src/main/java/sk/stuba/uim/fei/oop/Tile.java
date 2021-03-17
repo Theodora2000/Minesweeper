@@ -2,18 +2,14 @@ package sk.stuba.uim.fei.oop;
 
 public abstract class Tile {
 
-    protected boolean isRevealed() {
-        return revealed;
-    }
-
     private boolean revealed;
 
-    public Tile(){
-        this.revealed=false;
+    public Tile() {
+        this.revealed = false;
     }
 
-    public String draw(){
-        if(!revealed){
+    public String draw() {
+        if (!revealed) {
             return "#";
         }
         return drawRevealed();
@@ -21,9 +17,11 @@ public abstract class Tile {
 
     protected abstract String drawRevealed();
 
-    public  void reveal() throws MineRevealedException{
-        this.revealed=true;
-    };
+    public void reveal() throws MineRevealedException {
+        this.revealed = true;
+    }
 
-
+    public boolean isRevealed() {
+        return revealed;
+    }
 }
